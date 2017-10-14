@@ -20,7 +20,7 @@
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Bespoke Suits for Dogs! (A sample app for CodeDeploy)</title>
+    <title>Bespoke Suits for Dogs2! (A sample app for CodeDeploy2)</title>
     <meta name="viewport" content="initial-scale=1.0">
     <link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
@@ -31,12 +31,12 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Toggle navigation2</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Bespoke Suits for Dogs</a>
+        <a class="navbar-brand" href="#">Bespoke Suits for Dogs2</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -53,9 +53,9 @@
       <ul>
         <% for (final String instance : (List<String>) request.getAttribute("instanceIds")) { %>
           <% if (((Map<String, String>) request.getAttribute("instanceStates")).containsKey(instance)) { %>
-            <li> <%= instance %> - Instance Health: <%= ((Map<String, String>) request.getAttribute("instanceStates")).get(instance) %></li>
+            <li> <%= instance %> - Instance Health2: <%= ((Map<String, String>) request.getAttribute("instanceStates")).get(instance) %></li>
           <% } else { %>
-            <li> <%= instance %> - Instance Health: Unknown</li>
+            <li> <%= instance %> - Instance Health2: Unknown</li>
           <% } %>
         <% } %>
       </ul>
