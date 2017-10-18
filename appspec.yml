@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: /target/SampleMavenTomcatApp.war
+    destination: /tmp/codedeploy-deployment-staging-area/
+  - source: /aws-codedeploy-sample-tomcat/scripts/configure_http_port.xsl
+    destination: /tmp/codedeploy-deployment-staging-area/
+hooks:
+  ApplicationStop:
+    - location: aws-codedeploy-sample-tomcat/scripts/stop_application
+      timeout: 300
+  BeforeInstall:
+    - location: aws-codedeploy-sample-tomcat/scripts/install_dependencies
+      timeout: 300
+  ApplicationStart:
+    - location: aws-codedeploy-sample-tomcat/scripts/write_codedeploy_config.sh
+    - location: aws-codedeploy-sample-tomcat/scripts/start_application
+      timeout: 300
+  ValidateService:
+    - location: aws-codedeploy-sample-tomcat/scripts/basic_health_check.sh
